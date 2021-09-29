@@ -4,6 +4,11 @@
 
 https://github.com/dornellas13/serverless-challenge
 
+## Tecnologias utilizadas
+* NodeJS
+* Serverless
+* AWS: Lambda, DynamoDB, S3, API Gateway
+
 ## Executando o projeto
 
 Será necessário ter a biblioteca [Serverless](https://www.serverless.com/) rodando em sua máquina, além de uma conta [AWS configurada](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config)
