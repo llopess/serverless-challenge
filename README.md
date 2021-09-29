@@ -19,10 +19,10 @@ Também é possível testar o projeto localmente optando por executar `sls offli
 
 ## Endpoints
 
-* [Adicionar usuário](#adicionar-usuario)  
-* [Listar usuários](#listar-usuarios)  
-* [Atualizar usuário](#atualizar-usuario)  
-* [Excluir usuário](#excluir-usuario)  
+* [Adicionar usuário](#adicionar-usuário)  
+* [Listar usuários](#listar-usuários)  
+* [Atualizar usuário](#atualizar-usuário)  
+* [Excluir usuário](#excluir-usuário)  
 
 ### Adicionar usuário
 |Verbo|Request| 
