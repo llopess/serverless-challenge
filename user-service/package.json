@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "aws-sdk": "^2.996.0",
+    "bluebird": "^3.7.2",
+    "prettier": "^2.4.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "serverless-offline": "^8.2.0"
+  }
+}
