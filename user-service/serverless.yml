@@ -17,6 +17,7 @@ provider:
         - dynamodb:Scan
         - dynamodb:GetItem
         - dynamodb:PutItem
+        - dynamodb:DeleteItem
       Resource: "*"
 
 resources:
@@ -66,6 +67,14 @@ functions:
       - http:
           path: user/{id}
           method: put
+  deleteUser:
+    handler: api/user.deleteUser
+    description: Delete user
+    memorySize: 128
+    events:
+      - http:
+          path: user/{id}
+          method: delete
   
 plugins:
   - serverless-offline

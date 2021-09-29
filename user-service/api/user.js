@@ -81,7 +81,7 @@ const update = (event, ctx, callback) => {
       };
 
       dynamoDB.update(params, (err, data) => {
-        if (err) console.log(err);
+        if (err) callback(err);
         else
           callback(null, {
             statusCode: 200,
@@ -96,8 +96,32 @@ const update = (event, ctx, callback) => {
   }
 };
 
+const deleteUser = (event, ctx, callback) => {
+  const { pathParameters } = event;
+
+  if (pathParameters?.id) {
+    const params = {
+      TableName: USER_TABLE,
+      Key: { id: pathParameters.id },
+    };
+    dynamoDB.delete(params, (err, data) => {
+      if (err) callback(err);
+      else
+        callback(null, {
+          statusCode: 200,
+          body: JSON.stringify({ message: 'User deleted' }),
+        });
+    });
+  } else {
+    callback(null, {
+      body: JSON.stringify({ message: 'Missing id to delete' }),
+    });
+  }
+};
+
 module.exports = {
   create,
   list,
   update,
+  deleteUser,
 };
